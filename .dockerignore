@@ -1,0 +1,5 @@
+.docker/
+target/
+tests/
+Dockerfile
+migrations/

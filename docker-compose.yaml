@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+    pgsql:
+        image: postgres
+        container_name: newsletter
+        user: root
+        hostname: pgsql
+        environment:
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=newsletter
+            - POSTGRES_USER=postgres
+            - POSTGRES_PORT=5432
+            - POSTGRES_HOST=localhost
+        ports:
+            - '5432:5432'
+        volumes:
+            - './.docker/.postgres-data:/var/lib/postgresql/data'
